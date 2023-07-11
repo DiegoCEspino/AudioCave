@@ -24,18 +24,12 @@ app.use(express.urlencoded({ extended: true }));
 const isHeroku = process.env.IS_HEROKU || false;
 
 const mysql = require("mysql2");
-const connection = isHeroku ? mysql.createPool({
+const connection = mysql.createPool({
   connectionLimit : 100,
   host: "w3epjhex7h2ccjxx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   user: "toanzaxo4tig3u38",
   password: "ri7gmeay7exhsgn0",
   database: "k8jdyybhr34lxtxq",
-}) : mysql.createPool({
-  connectionLimit : 100,
-  host     : "localhost",
-  user     : "root",
-  password : "",
-  database : "comp2800",
 });
 
 const storage = multer.diskStorage({
