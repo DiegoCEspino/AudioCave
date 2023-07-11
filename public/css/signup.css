@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url();
+}
+
+* {
+  font-family: Raleway;
+  color: #B4CDED;
+}
+
+body {
+  margin: 0;
+  background-color: #0D1821;
+  overflow-x: hidden;
+}
+
+#general-container {
+  display: grid;
+  width: inherit;
+  grid-template-areas: "header" "login-form";
+  grid-template-columns: auto;
+  grid-template-rows: 10vh auto;
+  justify-items: center;
+  margin: auto;
+}
+
+#header-container {
+  grid-area: header;
+  width: 100vw;
+  background-color: #344966;
+}
+
+#header-container header {
+  display: grid;
+  grid-template-columns: 7vh auto;
+  column-gap: 10px;
+  align-items: center;
+  width: fit-content;
+  margin: 1.5vh auto;
+}
+
+#header-container #logo {
+  height: 7vh;
+}
+
+#header-container h1 {
+  width: fit-content;
+  margin: auto;
+  font-size: 40pt;
+  color: #ff575a !important;
+}
+
+#signupForm {
+  display: grid;
+  grid-area: login-form;
+  grid-template-columns: auto;
+  column-gap: 20px;
+  row-gap: 10px;
+  width: 35vw;
+  height: fit-content;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+#signupForm [type="button"] {
+  padding: 8px 10px;
+  border: 3px solid #ff575a;
+  border-radius: 40px;
+  font-size: 15pt;
+  font-weight: 500;
+  color: #f0f4ef;
+  background-color: #ff575a;
+  cursor: pointer;
+}
+
+#signupForm [type="text"],
+[type="email"], [type="number"] {
+  padding: 16px;
+  border: 3px solid #344966;
+  border-radius: 7px;
+  color: #B4CDED;
+  background-color: #0D1821;
+  font-size: 13pt;
+  font-weight: 600;
+}
+
+#mbti{
+  padding: 16px;
+  border: 3px solid #344966;
+  border-radius: 7px;
+  color: #B4CDED;
+  background-color: #0D1821;
+  font-size: 13pt;
+  font-weight: 600;
+}
+
+#signupForm .input {
+  display: grid;
+  width: inherit;
+  row-gap: 6px;
+}
+
+#signupForm .input-name {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  width: inherit;
+}
+
+#signupForm .input-name .input {
+  width: 70%;
+}
+
+#signupForm .input-name .input input {
+  width: 100%;
+}
+
+#signupForm label {
+  align-self: center;
+  font-size: 13pt;
+  font-weight: 300;
+}
+
+#signupForm #login {
+  border: 3px solid #344966;
+  font-weight: 500;
+  color: #f0f4ef;
+  background-color: #0D1821;
+  cursor: pointer;
+}
+
+#signupForm #login-row {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 16pt;
+  }
+  #header-container header {
+    display: grid;
+    grid-template-columns: 7vh auto;
+    column-gap: 10px;
+    align-items: center;
+    margin: 1.5vh auto;
+  }
+  #signupForm {
+    width: 60vw;
+  }
+  #signupForm [type="button"] {
+    padding: 12px 18px;
+    border: 3px solid #ff575a;
+    border-radius: 40px;
+    font-size: 20pt;
+    font-weight: 600;
+    color: #f0f4ef;
+    background-color: #ff575a;
+  }
+  #signupForm [type="text"],
+  [type="email"] {
+    font-size: 20pt;
+    font-weight: 600;
+  }
+  #signupForm label {
+    font-size: 16pt;
+  }
+}

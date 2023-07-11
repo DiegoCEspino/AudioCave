@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+  <div id="general-container">
+    <div id="header-container">
+      <header>
+        <img id="logo" src="/img/AudioCave_Logo_Blue_Red.png" alt="">
+        <h1>Audio Cave</h1>
+      </header>
+    </div>
+
+    <form id="signupForm" action="/signup" method="post">
+      <div class="input-name">
+        <div class="input">
+          <label>First Name</label>
+          <input id="fname" name="fname" type="text" placeholder="John" required>
+        </div>
+        <div class="input">
+          <label>Last Name</label>
+          <input id="lname" name="lname" type="text" placeholder="Doe" required>
+        </div>
+      </div>
+      <div class="input">
+        <label>Email</label>
+        <input id="email" name="email" type="email" placeholder="email@email.com" required>
+      </div>
+      <div class="input">
+        <label>Password</label>
+        <input id="password" name="password" type="text" placeholder="********" required>
+      </div>
+      <div class="input">
+        <label>Username</label>
+        <input id="username" name="username" type="text" placeholder="JDoe" required>
+      </div>
+      <div class="input">
+        <label>MBTI Personality</label>
+        <select name="mbti" id="mbti" required>
+          <option value="" disabled selected>Personality</option>
+          <option value="ESTJ">ESTJ</option>
+          <option value="ENTJ">ENTJ</option>
+          <option value="ESFJ">ESFJ</option>
+          <option value="ENFJ">ENFJ</option>
+          <option value="ISTJ">ISTJ</option>
+          <option value="ISFJ">ISFJ</option>
+          <option value="INTJ">INTJ</option>
+          <option value="INFJ">INFJ</option>
+          <option value="ESTP">ESTP</option>
+          <option value="ESFP">ESFP</option>
+          <option value="ENTP">ENTP</option>
+          <option value="ENFP">ENFP</option>
+          <option value="ISTP">ISTP</option>
+          <option value="ISFP">ISFP</option>
+          <option value="INTP">INTP</option>
+          <option value="INFP">INFP</option>
+        </select>
+      </div>
+      <div class="input">
+        <label>Age</label>
+        <input id="age" name="age" type="number" placeholder="24" min="1" max="150" required>
+      </div>
+      <div id="error">
+        <p><span id="serverMsg"></span></p>
+        <p id="errorMsg">&nbsp;</p>
+      </div>
+      <input id="submit" type="button" value="REGISTER" />
+      <div id="login-row">
+        <label for="login">Already have an account?</label>
+        <input id="login" type="button" value="LOG IN" />
+      </div>
+    </form>
+  </div>
+
+  <script src="/js/signup.js"></script>
+</body>
+
+</html>

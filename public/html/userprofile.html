@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+  <title>Web App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/userprofile.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
+  <link href="/img/Popcorn.png" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <div id="general-container">
+
+    <nav id="top-nav">
+      <a id="top-logo" class="active" href="/">
+        <img src="/img/AudioCave_Logo_Blue_Red.png" alt="">
+        <h1>Audiocave</h1>
+      </a>
+
+      <div id="top-menu">
+        <a href="/">Home</a>
+        <a href="/search">Search</a>
+        <a href="/library">Library</a>
+        <a href="/userprofile">Profile</a>
+        <a href="/new">New Albums</a>
+        <a href="/survey">Survey</a>
+        <a href="/logout">Logout</a>
+      </div>
+
+      <i id="hamburger" class="fa fa-bars" onclick="hamburger()"></i>
+    </nav>
+
+    <nav id="left-nav">
+      <br>
+      <div id="logo">
+        <img src="/img/AudioCAve_Logo_Blue_Red.png" alt="">
+        <h1>Audiocave</h1>
+      </div>
+      <br>
+      <div id="menu">
+        <a href="/">
+          <i class="fa-solid fa-house"></i>
+          <p>Home</p>
+        </a>
+        <a href="/search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>Search</p>
+        </a>
+        <a href="/library">
+          <i class="fa-solid fa-book"></i>
+          <p>Library</p>
+        </a>
+        <a href="/userprofile">
+          <i class="fa-solid fa-user"></i>
+          <p>Profile</p>
+        </a>
+        <a href="/new">
+          <i class="fa-solid fa-compact-disc"></i>
+          <p>New Albums</p>
+        </a>
+        <a href="/survey">
+          <i class="fa-solid fa-file-pen"></i>
+          <p>Survey</p>
+        </a>
+      </div>
+      <br>
+      <a href="/logout">Logout</a>
+      <br>
+    </nav>
+
+    <main>
+      <div id="profile">
+        <div id="profile-picture">
+          <img src="/img/default.img" alt="User Profile">
+          <label class="image-upload-wrapper">
+            <input id="image-upload" type="file" accept="image/png, image/gif, image/jpeg, image/jpg" />
+           <p>Upload Image</p>
+          </label>
+        </div>
+
+        <div id="username">
+          <h4>USER</h4>
+          <h1 class="fill">Username</h1>
+        </div>
+      </div>
+
+      <div id="information">
+        <div id="email">
+          <h4>E-Mail</h4>
+          <h1 class="fill">Email</h1>
+        </div>
+
+        <div id="password">
+          <h4>Password</h4>
+          <h1 class="fill">Password</h1>
+        </div>
+
+        <div id="age">
+          <h4>Age</h4>
+          <h1 class="fill">Age</h1>
+        </div>
+
+        <div id="buttons">
+          <button id="edit-profile">Edit Profile</button>
+          <button id="edit">Edit</button>
+          <button id="cancel">Cancel</button>
+        </div>
+      </div>
+
+      <div id="Timeline">
+        <div id="postForm">
+          <p>Make a new post!</p>
+          <label>
+            <input id="post-image-upload" type="file" accept="image/png, image/gif, image/jpeg" multiple="multiple" />
+            <p class="btn">Upload a Picture</p>
+          </label>
+          <div id="post-text">
+            <input id="postText" type="text" placeholder="Write here...">
+            <input id="post" type="submit" value="Post">
+          </div>
+        </div>
+        <p id="errorMsg"></p>
+        <div id="userPosts"></div>
+        <div id="userReviews"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/userprofile.js"></script>
+</body>
+
+</html>
