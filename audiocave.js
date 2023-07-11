@@ -26,10 +26,10 @@ const isHeroku = process.env.IS_HEROKU || false;
 const mysql = require("mysql2");
 const connection = isHeroku ? mysql.createPool({
   connectionLimit : 100,
-  host: "ble5mmo2o5v9oouq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  user: "xu76mlcd3o67jwnx",
-  password: "xhqasmzcj6v8di7m",
-  database: "zyt8w00z5yriluwj",
+  host: "w3epjhex7h2ccjxx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  user: "toanzaxo4tig3u38",
+  password: "ri7gmeay7exhsgn0",
+  database: "k8jdyybhr34lxtxq",
 }) : mysql.createPool({
   connectionLimit : 100,
   host     : "localhost",
